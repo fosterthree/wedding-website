@@ -27,11 +27,20 @@
   --color-bg:      #ffffff;
   --color-text:    #000000;
   --color-border:  #000000;
-  --color-muted:   #444444;
 
   --max-w:         860px;
   --max-w-narrow:  620px;
   --transition:    0.2s ease;
+
+  /* ── Text-shadow stroke values ─────────────
+     Stacked shadows simulate rounded stroke.
+     Adjust blur radii here to tune weight.     */
+  --stroke-body:   0 0 1px #000, 0 0 1px #000, 0 0 1.5px #000;
+  --stroke-label:  0 0 1px #000, 0 0 1.5px #000, 0 0 2px #000, 0 0 2px #000;
+  --stroke-note:   0 0 1px #000, 0 0 1px #000, 0 0 1.2px #000;
+  --stroke-footer: 0 0 1px rgba(255,255,255,0.7),
+                   0 0 1px rgba(255,255,255,0.7),
+                   0 0 1.5px rgba(255,255,255,0.7);
 }
 
 /* ─── RESET ─── */
@@ -50,11 +59,12 @@ a { color: inherit; }
 /* ─── BODY TEXT ─── */
 p, dd, li {
   font-family: var(--font-sans);
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
   font-weight: 100;
   color: #000;
-  -webkit-text-stroke: 1.5px #000;
-  paint-order: stroke fill;
+  text-shadow: var(--stroke-body);
   text-transform: uppercase;
+  line-height: 1.7;
 }
 
 /* ─── UTILITY ─── */
@@ -64,21 +74,22 @@ p, dd, li {
 /* ─── BUTTON ─── */
 .btn {
   display: inline-block;
-  padding: 0.65rem 2.5rem;
+  padding: 0.75rem 2.5rem;
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-weight: 100;
   letter-spacing: 0.242em;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
   border: 1.5px solid #000;
-  transition: background var(--transition), color var(--transition);
-  -webkit-text-stroke: 0;
+  text-shadow: var(--stroke-label);
+  transition: background var(--transition), color var(--transition), text-shadow var(--transition);
 }
 .btn:hover {
   background: #000;
   color: #fff;
+  text-shadow: none;
 }
 
 /* ─── HERO ─── */
@@ -109,7 +120,6 @@ p, dd, li {
 .hero-trellis--left  { left: 0; transform: translateX(-100%); }
 .hero-trellis--right { right: 0; transform: translateX(100%); }
 
-/* Reveal trellis when space allows */
 @media (min-width: 780px) {
   .hero-inner { max-width: 800px; }
   .hero-trellis--left  { left: 0; transform: none; }
@@ -124,14 +134,13 @@ p, dd, li {
 
 .hero-eyebrow {
   font-family: var(--font-sans);
-  font-size: clamp(0.65rem, 1.5vw, 0.8rem);
+  font-size: clamp(0.8rem, 1.8vw, 1rem);
   font-weight: 100;
   letter-spacing: 0.198em;
   text-transform: uppercase;
-  -webkit-text-stroke: 1.5px #000;
-  paint-order: stroke fill;
+  text-shadow: var(--stroke-body);
   margin-bottom: 1.75rem;
-  line-height: 1.8;
+  line-height: 1.9;
 }
 
 .hero-name {
@@ -149,35 +158,31 @@ p, dd, li {
   font-weight: 400;
   color: #000;
   margin: 0.1em 0;
-  -webkit-text-stroke: 0;
 }
 
 .hero-venue {
   font-family: var(--font-sans);
-  font-size: clamp(0.7rem, 1.6vw, 0.85rem);
+  font-size: clamp(0.85rem, 2vw, 1.05rem);
   font-weight: 100;
   letter-spacing: 0.154em;
   text-transform: uppercase;
-  -webkit-text-stroke: 1.5px #000;
-  paint-order: stroke fill;
+  text-shadow: var(--stroke-body);
   margin-top: 1.75rem;
   line-height: 2;
 }
 .hero-venue strong {
   font-weight: 100;
-  -webkit-text-stroke: 2px #000;
-  paint-order: stroke fill;
+  text-shadow: var(--stroke-label);
   letter-spacing: 0.154em;
 }
 
 .hero-date {
   font-family: var(--font-sans);
-  font-size: clamp(0.85rem, 2vw, 1.05rem);
+  font-size: clamp(1rem, 2.4vw, 1.25rem);
   font-weight: 100;
   letter-spacing: 0.132em;
   text-transform: uppercase;
-  -webkit-text-stroke: 2px #000;
-  paint-order: stroke fill;
+  text-shadow: var(--stroke-label);
   margin-top: 1.25rem;
   margin-bottom: 2rem;
   line-height: 1.8;
@@ -221,15 +226,13 @@ p, dd, li {
 /* ─── DETAILS ─── */
 .details { background: #fff; border-top: 1.5px solid #000; }
 
-.details-list {
-  width: 100%;
-}
+.details-list { width: 100%; }
 
 .details-row {
   display: grid;
-  grid-template-columns: 140px 1fr;
+  grid-template-columns: 160px 1fr;
   gap: 0.5rem 2rem;
-  padding: 1.25rem 0;
+  padding: 1.5rem 0;
   border-bottom: 1px solid #ddd;
   align-items: start;
 }
@@ -237,46 +240,43 @@ p, dd, li {
 
 dt {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 100;
   letter-spacing: 0.165em;
   text-transform: uppercase;
-  -webkit-text-stroke: 2px #000;
-  paint-order: stroke fill;
+  text-shadow: var(--stroke-label);
   padding-top: 0.1rem;
   line-height: 1.6;
 }
 
 dd {
   font-family: var(--font-sans);
-  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
   font-weight: 100;
-  -webkit-text-stroke: 1.5px #000;
-  paint-order: stroke fill;
+  text-shadow: var(--stroke-body);
   line-height: 1.7;
 }
 
 .details-link {
   display: inline-block;
-  font-size: 0.72rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
   font-weight: 100;
   letter-spacing: 0.154em;
   text-transform: uppercase;
   text-decoration: none;
   border-bottom: 1px solid #000;
   padding-bottom: 1px;
-  margin-top: 0.4rem;
-  -webkit-text-stroke: 1.5px #000;
-  paint-order: stroke fill;
+  margin-top: 0.5rem;
+  text-shadow: var(--stroke-body);
   transition: opacity var(--transition);
 }
 .details-link:hover { opacity: 0.5; }
 
 .details-note {
-  font-size: 0.85em;
+  font-size: 0.9em;
   text-transform: uppercase;
-  -webkit-text-stroke: 1.2px #000;
-  paint-order: stroke fill;
+  text-shadow: var(--stroke-note);
   opacity: 0.7;
 }
 
@@ -285,12 +285,11 @@ dd {
 
 .rsvp-intro {
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 100;
   letter-spacing: 0.11em;
   text-transform: uppercase;
-  -webkit-text-stroke: 1.5px #000;
-  paint-order: stroke fill;
+  text-shadow: var(--stroke-body);
   margin-bottom: 2.5rem;
 }
 
@@ -304,7 +303,7 @@ dd {
 .field {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .field--fieldset {
@@ -315,56 +314,46 @@ dd {
 .field-label,
 .field--fieldset legend {
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.9rem;
   font-weight: 100;
   letter-spacing: 0.198em;
   text-transform: uppercase;
-  -webkit-text-stroke: 2px #000;
-  paint-order: stroke fill;
+  text-shadow: var(--stroke-label);
   color: #000;
 }
 
 .field-optional {
   font-weight: 100;
   letter-spacing: 0.11em;
-  -webkit-text-stroke: 1.5px #000;
-  paint-order: stroke fill;
+  text-shadow: var(--stroke-note);
   text-transform: none;
   opacity: 0.55;
 }
 
 .field-input {
   font-family: var(--font-sans);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 100;
   color: #000;
-  -webkit-text-stroke: 1.5px #000;
-  paint-order: stroke fill;
+  text-shadow: var(--stroke-body);
   text-transform: uppercase;
   background: #fff;
   border: 1.5px solid #000;
   border-radius: 0;
-  padding: 0.65rem 0.85rem;
+  padding: 0.75rem 0.85rem;
   width: 100%;
   appearance: none;
   -webkit-appearance: none;
   outline: none;
-  transition: border-color var(--transition), box-shadow var(--transition);
+  transition: box-shadow var(--transition);
 }
 .field-input::placeholder {
-  color: #aaa;
-  -webkit-text-stroke: 0;
+  color: #bbb;
+  text-shadow: none;
   font-weight: 100;
 }
 .field-input:focus {
-  border-color: #000;
-  box-shadow: 0 0 0 2px rgba(0,0,0,0.08);
-}
-
-.field-textarea {
-  resize: vertical;
-  min-height: 100px;
-  line-height: 1.6;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
 }
 
 .field-select {
@@ -379,28 +368,27 @@ dd {
 .radio-group {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.85rem;
   margin-top: 0.25rem;
 }
 
 .radio-label {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.85rem;
   cursor: pointer;
 }
 
 .radio-input {
   appearance: none;
   -webkit-appearance: none;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border: 1.5px solid #000;
   border-radius: 50%;
   flex-shrink: 0;
   position: relative;
   cursor: pointer;
-  transition: background var(--transition);
 }
 .radio-input:checked::after {
   content: '';
@@ -412,10 +400,9 @@ dd {
 
 .radio-text {
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-weight: 100;
-  -webkit-text-stroke: 1.5px #000;
-  paint-order: stroke fill;
+  text-shadow: var(--stroke-body);
   text-transform: uppercase;
   letter-spacing: 0.055em;
 }
@@ -424,8 +411,8 @@ dd {
 .field--submit { align-items: center; margin-top: 0.5rem; }
 
 .btn--submit {
-  font-size: 0.75rem;
-  padding: 0.75rem 3rem;
+  font-size: 0.9rem;
+  padding: 0.85rem 3rem;
   cursor: pointer;
   background: #fff;
   font-family: var(--font-sans);
@@ -433,12 +420,13 @@ dd {
   font-weight: 100;
   border: 1.5px solid #000;
   text-transform: uppercase;
-  transition: background var(--transition), color var(--transition);
-  -webkit-text-stroke: 0;
+  text-shadow: var(--stroke-label);
+  transition: background var(--transition), color var(--transition), text-shadow var(--transition);
 }
 .btn--submit:hover {
   background: #000;
   color: #fff;
+  text-shadow: none;
 }
 
 /* Success message */
@@ -448,7 +436,6 @@ dd {
   font-size: 1.75rem;
   line-height: 1.5;
   padding: 2rem 0;
-  -webkit-text-stroke: 0;
 }
 
 /* ─── FOOTER ─── */
@@ -464,19 +451,17 @@ dd {
   font-size: clamp(1.5rem, 4vw, 2.25rem);
   font-weight: 400;
   color: #fff;
-  -webkit-text-stroke: 0;
   margin-bottom: 0.5rem;
 }
 
 .footer-date {
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.9rem;
   font-weight: 100;
   letter-spacing: 0.242em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.65);
-  -webkit-text-stroke: 1.5px rgba(255,255,255,0.65);
-  paint-order: stroke fill;
+  text-shadow: var(--stroke-footer);
 }
 
 /* ─── RESPONSIVE ─── */
@@ -485,7 +470,6 @@ dd {
     grid-template-columns: 1fr;
     gap: 0.25rem;
   }
-  dt { border-bottom: none; }
 }
 
 /* ─── REDUCED MOTION ─── */
