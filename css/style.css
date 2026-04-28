@@ -1,19 +1,36 @@
 /* ─────────────────────────────────────────────
-   TOKENS  — swap fonts/colors here
+   FONTS
+───────────────────────────────────────────── */
+@font-face {
+  font-family: 'Handelson';
+  src: url('../assets/fonts/zhandelson-three.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('../assets/fonts/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─────────────────────────────────────────────
+   TOKENS
 ───────────────────────────────────────────── */
 :root {
-  /* TODO: replace with your chosen fonts */
-  --font-serif:  'Cormorant Garamond', Georgia, serif;
-  --font-sans:   'Jost', system-ui, sans-serif;
+  --font-heading:    'Handelson', Georgia, serif;
+  --font-sans:       'Roboto Condensed', system-ui, sans-serif;
 
-  /* TODO: replace with your palette */
   --color-bg:        #faf8f5;
   --color-surface:   #ffffff;
-  --color-text:      #2c2a27;
-  --color-muted:     #7a7468;
-  --color-accent:    #8b6b4a;   /* warm bronze */
+  --color-text:      #000000;
+  --color-muted:     #000000;
+  --color-accent:    #000000;
   --color-accent-lt: #e8ddd3;
-  --color-border:    #e2ddd7;
+  --color-border:    #d0ccc8;
 
   --max-w:        1120px;
   --max-w-narrow:  680px;
@@ -35,7 +52,25 @@ img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 
 /* ─── TYPOGRAPHY ─── */
-h1, h2, h3 { font-family: var(--font-serif); font-weight: 400; line-height: 1.2; }
+h1, h2 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000;
+}
+h3 {
+  font-family: var(--font-sans);
+  font-weight: 100;
+  line-height: 1.2;
+  color: #000;
+  -webkit-text-stroke: 0.4px #000;
+}
+p {
+  font-family: var(--font-sans);
+  font-weight: 100;
+  color: #000;
+  -webkit-text-stroke: 0.3px #000;
+}
 p + p { margin-top: 1em; }
 
 /* ─── UTILITY ─── */
@@ -101,55 +136,62 @@ p + p { margin-top: 1em; }
 .hero-eyebrow {
   font-family: var(--font-sans);
   font-size: 0.75rem;
-  font-weight: 400;
+  font-weight: 100;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   opacity: 0.85;
   margin-bottom: 1.25rem;
+  -webkit-text-stroke: 0.4px #fff;
 }
 .hero-names {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-size: clamp(3.5rem, 10vw, 7.5rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.02em;
   line-height: 1;
   margin-bottom: 1.5rem;
+  color: #fff;
 }
 .ampersand {
-  font-style: italic;
   color: rgba(255,255,255,0.75);
 }
 .hero-date {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  font-weight: 300;
+  font-weight: 100;
   letter-spacing: 0.08em;
   margin-bottom: 0.35rem;
+  -webkit-text-stroke: 0.4px #fff;
 }
 .hero-location {
+  font-family: var(--font-sans);
   font-size: 0.8rem;
+  font-weight: 100;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   opacity: 0.8;
   margin-bottom: 2.5rem;
+  -webkit-text-stroke: 0.4px #fff;
 }
 
 /* ─── SECTION SHARED ─── */
 .section { padding: clamp(5rem, 10vw, 9rem) 0; }
 .section-label {
   display: block;
+  font-family: var(--font-sans);
   font-size: 0.7rem;
-  font-weight: 500;
+  font-weight: 100;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: #000;
   margin-bottom: 0.75rem;
+  -webkit-text-stroke: 0.4px #000;
 }
 .section-heading {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-size: clamp(2rem, 4.5vw, 3rem);
   font-weight: 400;
-  color: var(--color-text);
+  color: #000;
   margin-bottom: 2rem;
 }
 
@@ -193,9 +235,11 @@ p + p { margin-top: 1em; }
   color: var(--color-accent);
 }
 .detail-card h3 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.35rem;
+  font-weight: 100;
   margin-bottom: 0.75rem;
+  -webkit-text-stroke: 0.4px #000;
 }
 .detail-time {
   font-size: 0.9rem;
@@ -235,9 +279,11 @@ p + p { margin-top: 1em; }
   margin-top: 1rem;
 }
 .travel-block h3 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.4rem;
+  font-weight: 100;
   margin-bottom: 0.75rem;
+  -webkit-text-stroke: 0.4px #000;
 }
 .travel-block p { color: var(--color-muted); font-size: 0.95rem; }
 
@@ -269,22 +315,26 @@ p + p { margin-top: 1em; }
   padding: 4rem 1rem;
 }
 .footer-monogram {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 400;
   color: #fff;
   margin-bottom: 0.5rem;
 }
 .footer-date {
+  font-family: var(--font-sans);
   font-size: 0.8rem;
+  font-weight: 100;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
+  -webkit-text-stroke: 0.4px rgba(255,255,255,0.65);
 }
 .footer-note {
-  font-family: var(--font-serif);
-  font-style: italic;
+  font-family: var(--font-sans);
   font-size: 1rem;
+  font-weight: 100;
+  -webkit-text-stroke: 0.3px rgba(255,255,255,0.65);
 }
 
 @media (max-width: 700px) {
