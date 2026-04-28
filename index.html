@@ -111,24 +111,91 @@
 
       <p class="rsvp-intro">Kindly reply by September 24th, 2026.</p>
 
-      <div class="rsvp-form-wrapper">
-        <!--
-          HOW TO SET UP YOUR RSVP FORM:
-          1. Go to forms.google.com and create your form
-          2. Click Send → Embed icon (<>) → copy the src URL
-          3. Paste that URL below in place of REPLACE_WITH_YOUR_FORM_ID
-        -->
-        <iframe
-          class="rsvp-iframe"
-          src="https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_FORM_ID/viewform?embedded=true"
-          width="100%"
-          height="860"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-          title="RSVP Form"
-        >Loading…</iframe>
-      </div>
+      <form class="rsvp-form" action="https://formspree.io/f/mbdqndeo" method="POST" novalidate>
+
+        <!-- Name -->
+        <div class="field">
+          <label class="field-label" for="name">Full Name</label>
+          <input class="field-input" type="text" id="name" name="name" required placeholder="Grace Yuhas" />
+        </div>
+
+        <!-- Email -->
+        <div class="field">
+          <label class="field-label" for="email">Email Address</label>
+          <input class="field-input" type="email" id="email" name="email" required placeholder="you@example.com" />
+        </div>
+
+        <!-- Attending -->
+        <fieldset class="field field--fieldset">
+          <legend class="field-label">Will you be attending?</legend>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input class="radio-input" type="radio" name="attending" value="Joyfully accepts" required />
+              <span class="radio-text">Joyfully accepts</span>
+            </label>
+            <label class="radio-label">
+              <input class="radio-input" type="radio" name="attending" value="Regretfully declines" />
+              <span class="radio-text">Regretfully declines</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Number of guests -->
+        <div class="field">
+          <label class="field-label" for="guests">Number of Guests (including yourself)</label>
+          <select class="field-input field-select" id="guests" name="guests">
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+
+        <!-- Dietary -->
+        <div class="field">
+          <label class="field-label" for="dietary">Dietary Restrictions or Allergies <span class="field-optional">(optional)</span></label>
+          <input class="field-input" type="text" id="dietary" name="dietary" placeholder="None" />
+        </div>
+
+        <!-- Song request -->
+        <div class="field">
+          <label class="field-label" for="song">Song Request <span class="field-optional">(optional)</span></label>
+          <input class="field-input" type="text" id="song" name="song" placeholder="What gets you on the dance floor?" />
+        </div>
+
+        <!-- Message -->
+        <div class="field">
+          <label class="field-label" for="message">A Note for the Couple <span class="field-optional">(optional)</span></label>
+          <textarea class="field-input field-textarea" id="message" name="message" rows="4" placeholder="We can't wait to celebrate with you!"></textarea>
+        </div>
+
+        <div class="field field--submit">
+          <button class="btn btn--submit" type="submit">Send RSVP</button>
+        </div>
+
+      </form>
+
+      <!-- Success message (shown after submit via JS) -->
+      <p class="rsvp-success" id="rsvp-success" hidden>
+        Thank you! We've received your RSVP and can't wait to celebrate with you.
+      </p>
+
+      <script>
+        const form = document.querySelector('.rsvp-form');
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const data = new FormData(form);
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            form.hidden = true;
+            document.getElementById('rsvp-success').hidden = false;
+          } else {
+            alert('Something went wrong — please try again or email us directly.');
+          }
+        });
+      </script>
 
     </div>
   </section>

@@ -282,16 +282,155 @@ dd {
   margin-bottom: 2.5rem;
 }
 
-.rsvp-form-wrapper {
-  background: #fff;
-  border: 1.5px solid #000;
-  overflow: hidden;
+/* ─── RSVP FORM ─── */
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.rsvp-iframe {
-  display: block;
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field--fieldset {
   border: none;
+  padding: 0;
+}
+
+.field-label,
+.field--fieldset legend {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.5px #000;
+  color: #000;
+}
+
+.field-optional {
+  font-weight: 100;
+  letter-spacing: 0.1em;
+  -webkit-text-stroke: 0.3px #000;
+  text-transform: none;
+  opacity: 0.55;
+}
+
+.field-input {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 100;
+  color: #000;
+  -webkit-text-stroke: 0.3px #000;
+  background: #fff;
+  border: 1.5px solid #000;
+  border-radius: 0;
+  padding: 0.65rem 0.85rem;
   width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.field-input::placeholder {
+  color: #aaa;
+  -webkit-text-stroke: 0;
+  font-weight: 100;
+}
+.field-input:focus {
+  border-color: #000;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.08);
+}
+
+.field-textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.6;
+}
+
+.field-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23000' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+/* Radio buttons */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.radio-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid #000;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.radio-input:checked::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.radio-text {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 100;
+  -webkit-text-stroke: 0.3px #000;
+  letter-spacing: 0.05em;
+}
+
+/* Submit */
+.field--submit { align-items: center; margin-top: 0.5rem; }
+
+.btn--submit {
+  font-size: 0.75rem;
+  padding: 0.75rem 3rem;
+  cursor: pointer;
+  background: #fff;
+  font-family: var(--font-sans);
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  border: 1.5px solid #000;
+  text-transform: uppercase;
+  transition: background var(--transition), color var(--transition);
+  -webkit-text-stroke: 0;
+}
+.btn--submit:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Success message */
+.rsvp-success {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  line-height: 1.5;
+  padding: 2rem 0;
+  -webkit-text-stroke: 0;
 }
 
 /* ─── FOOTER ─── */
