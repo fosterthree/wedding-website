@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grace & Asa — Getting Married</title>
+  <meta name="description" content="Join us as we celebrate the wedding of Grace and Asa." />
+
+  <!-- TODO: Replace with your chosen fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <!-- TODO: uncomment and replace src once you add your hero photo -->
+    <!-- <img class="hero-bg" src="assets/images/hero-bg.jpg" alt="" role="presentation" /> -->
+    <div class="hero-content">
+      <p class="hero-eyebrow">We're getting married</p>
+      <h1 class="hero-names">Grace <span class="ampersand">&amp;</span> Asa</h1>
+      <p class="hero-date"><!-- TODO: Add your date, e.g. "September 20, 2025" --></p>
+      <p class="hero-location"><!-- TODO: Add your city/venue, e.g. "Napa Valley, California" --></p>
+      <a href="#rsvp" class="btn btn--primary">RSVP</a>
+    </div>
+  </section>
+
+  <!-- ── OUR STORY ── -->
+  <section class="section story" id="story">
+    <div class="container container--narrow">
+      <span class="section-label">Our Story</span>
+      <h2 class="section-heading">How It All Began</h2>
+      <!-- TODO: Replace with your story -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+    </div>
+    <!-- Optional: add a photo grid below -->
+    <div class="story-photos container">
+      <!-- <img src="assets/images/story-1.jpg" alt="Grace and Asa" />
+           <img src="assets/images/story-2.jpg" alt="Grace and Asa" /> -->
+    </div>
+  </section>
+
+  <!-- ── DETAILS ── -->
+  <section class="section details" id="details">
+    <div class="container">
+      <span class="section-label">The Details</span>
+      <h2 class="section-heading">Ceremony &amp; Reception</h2>
+      <div class="details-grid">
+
+        <div class="detail-card">
+          <div class="detail-icon">&#10038;</div>
+          <h3>Ceremony</h3>
+          <p class="detail-time"><!-- TODO: e.g. "4:00 PM" --></p>
+          <p class="detail-venue"><!-- TODO: Venue name --></p>
+          <p class="detail-address"><!-- TODO: Address --></p>
+          <a class="detail-link" href="#" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">&#9825;</div>
+          <h3>Reception</h3>
+          <p class="detail-time"><!-- TODO: e.g. "6:00 PM" --></p>
+          <p class="detail-venue"><!-- TODO: Venue name --></p>
+          <p class="detail-address"><!-- TODO: Address --></p>
+          <a class="detail-link" href="#" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">&#9901;</div>
+          <h3>Dress Code</h3>
+          <p><!-- TODO: e.g. "Black Tie Optional" --></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TRAVEL & LODGING ── -->
+  <section class="section travel" id="travel">
+    <div class="container container--narrow">
+      <span class="section-label">Travel &amp; Lodging</span>
+      <h2 class="section-heading">Getting Here &amp; Where to Stay</h2>
+      <div class="travel-blocks">
+        <div class="travel-block">
+          <h3>Recommended Hotels</h3>
+          <!-- TODO: Add hotel blocks -->
+          <p>Details coming soon. Check back for our curated list of nearby accommodations.</p>
+        </div>
+        <div class="travel-block">
+          <h3>Getting There</h3>
+          <!-- TODO: Add travel info -->
+          <p>Details coming soon. We'll share the best routes and airport info here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RSVP ── -->
+  <section class="section rsvp" id="rsvp">
+    <div class="container container--narrow">
+      <span class="section-label">RSVP</span>
+      <h2 class="section-heading">Will You Join Us?</h2>
+      <p class="rsvp-intro">Kindly reply by <!-- TODO: Add RSVP deadline -->.</p>
+
+      <div class="rsvp-form-wrapper">
+        <!--
+          HOW TO SET UP YOUR RSVP FORM:
+          1. Go to forms.google.com and create a new form
+          2. Add fields: Name, Email, Attending (yes/no), Meal preference, Song request, etc.
+          3. Click Send → Embed (<>) → copy the src URL from the <iframe> tag
+          4. Paste that URL in the src attribute below and update width/height as needed
+        -->
+        <iframe
+          class="rsvp-iframe"
+          src="https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_FORM_ID/viewform?embedded=true"
+          width="100%"
+          height="860"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="RSVP Form"
+        >Loading form…</iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <p class="footer-monogram">G &amp; A</p>
+    <p class="footer-date"><!-- TODO: Wedding date --></p>
+    <p class="footer-note">With love, Grace &amp; Asa</p>
+  </footer>
+
+</body>
+</html>
