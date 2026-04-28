@@ -10,9 +10,17 @@
 }
 
 @font-face {
-  font-family: 'Roboto Condensed';
-  src: url('../assets/fonts/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
+  font-family: 'Pantograph Pro';
+  src: url('../assets/fonts/PantographPro-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pantograph Pro';
+  src: url('../assets/fonts/PantographPro-Bold.ttf') format('truetype');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -22,7 +30,7 @@
 ───────────────────────────────────────────── */
 :root {
   --font-heading: 'Handelson', Georgia, serif;
-  --font-sans:    'Roboto Condensed', system-ui, sans-serif;
+  --font-sans:    'Pantograph Pro', system-ui, sans-serif;
 
   --color-bg:      #ffffff;
   --color-text:    #000000;
@@ -31,16 +39,6 @@
   --max-w:         860px;
   --max-w-narrow:  620px;
   --transition:    0.2s ease;
-
-  /* ── Text-shadow stroke values ─────────────
-     Stacked shadows simulate rounded stroke.
-     Adjust blur radii here to tune weight.     */
-  --stroke-body:   0 0 1px #000, 0 0 1px #000, 0 0 1.5px #000;
-  --stroke-label:  0 0 1px #000, 0 0 1.5px #000, 0 0 2px #000, 0 0 2px #000;
-  --stroke-note:   0 0 1px #000, 0 0 1px #000, 0 0 1.2px #000;
-  --stroke-footer: 0 0 1px rgba(255,255,255,0.7),
-                   0 0 1px rgba(255,255,255,0.7),
-                   0 0 1.5px rgba(255,255,255,0.7);
 }
 
 /* ─── RESET ─── */
@@ -60,9 +58,8 @@ a { color: inherit; }
 p, dd, li {
   font-family: var(--font-sans);
   font-size: clamp(1rem, 2.2vw, 1.15rem);
-  font-weight: 100;
+  font-weight: 600;
   color: #000;
-  text-shadow: var(--stroke-body);
   text-transform: uppercase;
   line-height: 1.7;
 }
@@ -77,19 +74,17 @@ p, dd, li {
   padding: 0.75rem 2.5rem;
   font-family: var(--font-sans);
   font-size: 0.9rem;
-  font-weight: 100;
+  font-weight: 600;
   letter-spacing: 0.242em;
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
   border: 1.5px solid #000;
-  text-shadow: var(--stroke-label);
   transition: background var(--transition), color var(--transition), text-shadow var(--transition);
 }
 .btn:hover {
   background: #000;
   color: #fff;
-  text-shadow: none;
 }
 
 /* ─── HERO ─── */
@@ -135,10 +130,9 @@ p, dd, li {
 .hero-eyebrow {
   font-family: var(--font-sans);
   font-size: clamp(0.8rem, 1.8vw, 1rem);
-  font-weight: 100;
+  font-weight: 600;
   letter-spacing: 0.198em;
   text-transform: uppercase;
-  text-shadow: var(--stroke-body);
   margin-bottom: 1.75rem;
   line-height: 1.9;
 }
@@ -163,26 +157,23 @@ p, dd, li {
 .hero-venue {
   font-family: var(--font-sans);
   font-size: clamp(0.85rem, 2vw, 1.05rem);
-  font-weight: 100;
+  font-weight: 600;
   letter-spacing: 0.154em;
   text-transform: uppercase;
-  text-shadow: var(--stroke-body);
   margin-top: 1.75rem;
   line-height: 2;
 }
 .hero-venue strong {
-  font-weight: 100;
-  text-shadow: var(--stroke-label);
+  font-weight: 600;
   letter-spacing: 0.154em;
 }
 
 .hero-date {
   font-family: var(--font-sans);
   font-size: clamp(1rem, 2.4vw, 1.25rem);
-  font-weight: 100;
+  font-weight: 700;
   letter-spacing: 0.132em;
   text-transform: uppercase;
-  text-shadow: var(--stroke-label);
   margin-top: 1.25rem;
   margin-bottom: 2rem;
   line-height: 1.8;
@@ -241,10 +232,9 @@ p, dd, li {
 dt {
   font-family: var(--font-sans);
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 700;
   letter-spacing: 0.165em;
   text-transform: uppercase;
-  text-shadow: var(--stroke-label);
   padding-top: 0.1rem;
   line-height: 1.6;
 }
@@ -252,8 +242,7 @@ dt {
 dd {
   font-family: var(--font-sans);
   font-size: clamp(1rem, 2.2vw, 1.15rem);
-  font-weight: 100;
-  text-shadow: var(--stroke-body);
+  font-weight: 600;
   line-height: 1.7;
 }
 
@@ -261,14 +250,13 @@ dd {
   display: inline-block;
   font-family: var(--font-sans);
   font-size: 0.9rem;
-  font-weight: 100;
+  font-weight: 600;
   letter-spacing: 0.154em;
   text-transform: uppercase;
   text-decoration: none;
   border-bottom: 1px solid #000;
   padding-bottom: 1px;
   margin-top: 0.5rem;
-  text-shadow: var(--stroke-body);
   transition: opacity var(--transition);
 }
 .details-link:hover { opacity: 0.5; }
@@ -276,7 +264,6 @@ dd {
 .details-note {
   font-size: 0.9em;
   text-transform: uppercase;
-  text-shadow: var(--stroke-note);
   opacity: 0.7;
 }
 
@@ -286,10 +273,9 @@ dd {
 .rsvp-intro {
   text-align: center;
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 600;
   letter-spacing: 0.11em;
   text-transform: uppercase;
-  text-shadow: var(--stroke-body);
   margin-bottom: 2.5rem;
 }
 
@@ -315,17 +301,15 @@ dd {
 .field--fieldset legend {
   font-family: var(--font-sans);
   font-size: 0.9rem;
-  font-weight: 100;
+  font-weight: 700;
   letter-spacing: 0.198em;
   text-transform: uppercase;
-  text-shadow: var(--stroke-label);
   color: #000;
 }
 
 .field-optional {
-  font-weight: 100;
+  font-weight: 600;
   letter-spacing: 0.11em;
-  text-shadow: var(--stroke-note);
   text-transform: none;
   opacity: 0.55;
 }
@@ -333,9 +317,8 @@ dd {
 .field-input {
   font-family: var(--font-sans);
   font-size: 1.1rem;
-  font-weight: 100;
+  font-weight: 600;
   color: #000;
-  text-shadow: var(--stroke-body);
   text-transform: uppercase;
   background: #fff;
   border: 1.5px solid #000;
@@ -349,8 +332,7 @@ dd {
 }
 .field-input::placeholder {
   color: #bbb;
-  text-shadow: none;
-  font-weight: 100;
+  font-weight: 600;
 }
 .field-input:focus {
   box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
@@ -401,8 +383,7 @@ dd {
 .radio-text {
   font-family: var(--font-sans);
   font-size: 1.1rem;
-  font-weight: 100;
-  text-shadow: var(--stroke-body);
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.055em;
 }
@@ -417,16 +398,14 @@ dd {
   background: #fff;
   font-family: var(--font-sans);
   letter-spacing: 0.242em;
-  font-weight: 100;
+  font-weight: 600;
   border: 1.5px solid #000;
   text-transform: uppercase;
-  text-shadow: var(--stroke-label);
   transition: background var(--transition), color var(--transition), text-shadow var(--transition);
 }
 .btn--submit:hover {
   background: #000;
   color: #fff;
-  text-shadow: none;
 }
 
 /* Success message */
@@ -457,11 +436,10 @@ dd {
 .footer-date {
   font-family: var(--font-sans);
   font-size: 0.9rem;
-  font-weight: 100;
+  font-weight: 600;
   letter-spacing: 0.242em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.65);
-  text-shadow: var(--stroke-footer);
 }
 
 /* ─── RESPONSIVE ─── */
