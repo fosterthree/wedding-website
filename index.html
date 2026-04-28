@@ -149,6 +149,12 @@
           </select>
         </div>
 
+        <!-- Guest 2 name — shown only when guests = 2 -->
+        <div class="field" id="guest2-field" hidden>
+          <label class="field-label" for="guest2">Guest Name</label>
+          <input class="field-input" type="text" id="guest2" name="guest2" placeholder="Full name" />
+        </div>
+
         <div class="field field--submit">
           <button class="btn btn--submit" type="submit">Send RSVP</button>
         </div>
@@ -161,6 +167,16 @@
       </p>
 
       <script>
+        // Show/hide guest 2 name field based on dropdown
+        const guestsSelect = document.getElementById('guests');
+        const guest2Field  = document.getElementById('guest2-field');
+        const guest2Input  = document.getElementById('guest2');
+        guestsSelect.addEventListener('change', () => {
+          const isTwo = guestsSelect.value === '2';
+          guest2Field.hidden = !isTwo;
+          guest2Input.required = isTwo;
+        });
+
         const form = document.querySelector('.rsvp-form');
         form.addEventListener('submit', async (e) => {
           e.preventDefault();
