@@ -3,204 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grace Yuhas & Asa Foster III — October 24, 2026</title>
+  <title>Grace Yuhas &amp; Asa Foster III — October 24, 2026</title>
   <meta name="description" content="You are cordially invited to celebrate the wedding of Grace Yuhas and Asa Foster III at Allegheny Rivertrail Park, October 24th, 2026." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- ── HERO ── -->
-  <section class="hero">
-    <div class="hero-inner">
-
-      <!--
-        ASSET: assets/images/trellis-left.png
-        Export the left trellis column (with top corner bracket + vines) as a tall PNG
-      -->
-      <img class="hero-trellis hero-trellis--left" src="assets/images/trellis-left.png" alt="" role="presentation" />
-
-      <!--
-        ASSET: assets/images/trellis-right.png
-        Export the right trellis column (with top corner bracket + vines) as a tall PNG
-      -->
-      <img class="hero-trellis hero-trellis--right" src="assets/images/trellis-right.png" alt="" role="presentation" />
-
-      <div class="hero-content">
-        <p class="hero-eyebrow">You are cordially invited<br>to celebrate the wedding of</p>
-
-        <img src="assets/images/GraceAsa.png" alt="Grace Yuhas & Asa Foster III" class="hero-name-image">
-
-        <p class="hero-venue">
-          at the<br>
-          <strong>Allegheny Rivertrail Park</strong><br>
-          in Aspinwall, PA
-        </p>
-
-        <p class="hero-date">October 24th, 2026<br>6pm – 10pm</p>
-
-        <a href="#rsvp" class="btn">RSVP</a>
-      </div>
-
-      <!--
-        ASSET: assets/images/hero-plants.png
-        Export the bottom botanical row (grasses, rocks, ferns) as a wide PNG
-      -->
-      <img class="hero-plants" src="assets/images/hero-plants.png" alt="" role="presentation" />
-
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-img-wrap">
+      <img class="header-img" src="assets/images/header.png" alt="Grace Yuhas &amp; Asa Foster III — October 24th, 2026" />
     </div>
-  </section>
+  </header>
 
-  <!-- ── DETAILS ── -->
-  <section class="section details" id="details">
-    <div class="container container--narrow">
+  <!-- NAV -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <ul class="nav-list">
+      <li><a href="index.html" class="nav-link nav-link--active">Details</a></li>
+      <li><a href="venue.html"  class="nav-link">Venue</a></li>
+      <li><a href="travel.html" class="nav-link">Travel</a></li>
+      <li><a href="rsvp.html"   class="nav-link">RSVP</a></li>
+    </ul>
+  </nav>
 
-      <div class="section-title-wrap">
-        <!--
-          ASSET: assets/images/divider-left.png
-          Export the left arrow/branch divider from the "Details" heading
-        -->
-        <img class="divider-img" src="assets/images/divider-left.png" alt="" role="presentation" />
-        <h2 class="section-heading-script">Details</h2>
-        <!--
-          ASSET: assets/images/divider-right.png
-          Export the right arrow/branch divider (mirror of the left)
-        -->
-        <img class="divider-img divider-img--flip" src="assets/images/divider-right.png" alt="" role="presentation" />
-      </div>
-
+  <!-- DETAILS -->
+  <main class="site-main">
+    <div class="container">
       <dl class="details-list">
+
         <div class="details-row">
-          <dt>When</dt>
-          <dd>Saturday, October 24th, 2026 &nbsp;·&nbsp; 6pm – 10pm</dd>
+          <dt class="details-label">When</dt>
+          <dd class="details-value">
+            Saturday, October 24th, 2026<br>
+            6pm – 10pm
+          </dd>
         </div>
+
         <div class="details-row">
-          <dt>Where</dt>
-          <dd>
+          <dt class="details-label">Where</dt>
+          <dd class="details-value">
             Allegheny Rivertrail Park<br>
-            285 River Ave, Pittsburgh, PA 15215<br>
-            <a class="details-link" href="https://maps.google.com/?q=285+River+Ave+Pittsburgh+PA+15215" target="_blank" rel="noopener">Get Directions</a>
+            285 River Ave, Pittsburgh, PA 15215
           </dd>
         </div>
+
         <div class="details-row">
-          <dt>Food &amp; Drink</dt>
-          <dd>Classic Pittsburgh fare with a New England twist</dd>
+          <dt class="details-label">Food &amp; Drink</dt>
+          <dd class="details-value">Classic Pittsburgh fare with a New England twist</dd>
         </div>
+
         <div class="details-row">
-          <dt>Attire</dt>
-          <dd>
-            Fall Cocktail<br>
-            <span class="details-note">(Note: The venue is outdoors, but covered)</span>
-          </dd>
+          <dt class="details-label">Attire</dt>
+          <dd class="details-value">Fall Cocktail (Open-air venue, layers recommended)</dd>
         </div>
+
       </dl>
-
     </div>
-  </section>
+  </main>
 
-  <!-- ── RSVP ── -->
-  <section class="section rsvp" id="rsvp">
-    <div class="container container--narrow">
+  <!-- RSVP FORM — saved for rsvp.html -->
+  <!--
+  <section id="rsvp">
+    <form class="rsvp-form" action="https://formspree.io/f/mbdqndeo" method="POST" novalidate>
 
-      <div class="section-title-wrap">
-        <img class="divider-img" src="assets/images/divider-left.png" alt="" role="presentation" />
-        <h2 class="section-heading-script">RSVP</h2>
-        <img class="divider-img divider-img--flip" src="assets/images/divider-right.png" alt="" role="presentation" />
+      <div class="field">
+        <label class="field-label" for="name">Full Name</label>
+        <input class="field-input" type="text" id="name" name="name" required placeholder="Grace Yuhas" />
       </div>
 
-      <p class="rsvp-intro">Kindly reply by September 24th, 2026.</p>
+      <div class="field">
+        <label class="field-label" for="email">Email Address</label>
+        <input class="field-input" type="email" id="email" name="email" required placeholder="you@example.com" />
+      </div>
 
-      <form class="rsvp-form" action="https://formspree.io/f/mbdqndeo" method="POST" novalidate>
-
-        <!-- Name -->
-        <div class="field">
-          <label class="field-label" for="name">Full Name</label>
-          <input class="field-input" type="text" id="name" name="name" required placeholder="Grace Yuhas" />
+      <fieldset class="field field--fieldset">
+        <legend class="field-label">Will you be attending?</legend>
+        <div class="radio-group">
+          <label class="radio-label">
+            <input class="radio-input" type="radio" name="attending" value="Joyfully accepts" required />
+            <span class="radio-text">Joyfully accepts</span>
+          </label>
+          <label class="radio-label">
+            <input class="radio-input" type="radio" name="attending" value="Regretfully declines" />
+            <span class="radio-text">Regretfully declines</span>
+          </label>
         </div>
+      </fieldset>
 
-        <!-- Email -->
-        <div class="field">
-          <label class="field-label" for="email">Email Address</label>
-          <input class="field-input" type="email" id="email" name="email" required placeholder="you@example.com" />
-        </div>
+      <div class="field">
+        <label class="field-label" for="guests">Number of Guests (including yourself)</label>
+        <select class="field-input field-select" id="guests" name="guests">
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
 
-        <!-- Attending -->
-        <fieldset class="field field--fieldset">
-          <legend class="field-label">Will you be attending?</legend>
-          <div class="radio-group">
-            <label class="radio-label">
-              <input class="radio-input" type="radio" name="attending" value="Joyfully accepts" required />
-              <span class="radio-text">Joyfully accepts</span>
-            </label>
-            <label class="radio-label">
-              <input class="radio-input" type="radio" name="attending" value="Regretfully declines" />
-              <span class="radio-text">Regretfully declines</span>
-            </label>
-          </div>
-        </fieldset>
+      <div class="field" id="guest2-field" hidden>
+        <label class="field-label" for="guest2">Guest Name</label>
+        <input class="field-input" type="text" id="guest2" name="guest2" placeholder="Full name" />
+      </div>
 
-        <!-- Number of guests -->
-        <div class="field">
-          <label class="field-label" for="guests">Number of Guests (including yourself)</label>
-          <select class="field-input field-select" id="guests" name="guests">
-            <option value="1">1</option>
-            <option value="2">2</option>
-          </select>
-        </div>
+      <div class="field field--submit">
+        <button class="btn btn--submit" type="submit">Send RSVP</button>
+      </div>
 
-        <!-- Guest 2 name — shown only when guests = 2 -->
-        <div class="field" id="guest2-field" hidden>
-          <label class="field-label" for="guest2">Guest Name</label>
-          <input class="field-input" type="text" id="guest2" name="guest2" placeholder="Full name" />
-        </div>
+    </form>
 
-        <div class="field field--submit">
-          <button class="btn btn--submit" type="submit">Send RSVP</button>
-        </div>
+    <p class="rsvp-success" id="rsvp-success" hidden>
+      Thank you! We've received your RSVP and can't wait to celebrate with you.
+    </p>
 
-      </form>
+    <script>
+      const guestsSelect = document.getElementById('guests');
+      const guest2Field  = document.getElementById('guest2-field');
+      const guest2Input  = document.getElementById('guest2');
+      guestsSelect.addEventListener('change', () => {
+        const isTwo = guestsSelect.value === '2';
+        guest2Field.hidden = !isTwo;
+        guest2Input.required = isTwo;
+      });
 
-      <!-- Success message (shown after submit via JS) -->
-      <p class="rsvp-success" id="rsvp-success" hidden>
-        Thank you! We've received your RSVP and can't wait to celebrate with you.
-      </p>
-
-      <script>
-        // Show/hide guest 2 name field based on dropdown
-        const guestsSelect = document.getElementById('guests');
-        const guest2Field  = document.getElementById('guest2-field');
-        const guest2Input  = document.getElementById('guest2');
-        guestsSelect.addEventListener('change', () => {
-          const isTwo = guestsSelect.value === '2';
-          guest2Field.hidden = !isTwo;
-          guest2Input.required = isTwo;
+      const form = document.querySelector('.rsvp-form');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
         });
-
-        const form = document.querySelector('.rsvp-form');
-        form.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          const data = new FormData(form);
-          const res = await fetch(form.action, {
-            method: 'POST',
-            body: data,
-            headers: { 'Accept': 'application/json' }
-          });
-          if (res.ok) {
-            form.hidden = true;
-            document.getElementById('rsvp-success').hidden = false;
-          } else {
-            alert('Something went wrong — please try again or email us directly.');
-          }
-        });
-      </script>
-
-    </div>
+        if (res.ok) {
+          form.hidden = true;
+          document.getElementById('rsvp-success').hidden = false;
+        } else {
+          alert('Something went wrong — please try again or email us directly.');
+        }
+      });
+    </script>
   </section>
-
-  <!-- ── FOOTER ── -->
-  <footer class="site-footer">
-    <p class="footer-names">Grace Yuhas &amp; Asa Foster III</p>
-    <p class="footer-date">October 24th, 2026 · Aspinwall, PA</p>
-  </footer>
+  -->
 
 </body>
 </html>
