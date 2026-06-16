@@ -391,6 +391,7 @@ body {
   font-family: 'Pantograph Pro', sans-serif;
   font-size: var(--theme-body-size);
   font-weight: var(--theme-body-weight);
+  font-style: normal;
   text-transform: uppercase;
   letter-spacing: var(--theme-body-letter-spacing);
 }
