@@ -36,7 +36,7 @@ html {
 
 body {
   font-family: 'Pantograph Pro', sans-serif;
-  font-weight: 500;
+  font-weight: 550;
   font-size: 14px;
   line-height: 1.25;
   color: #000;
@@ -189,7 +189,7 @@ body {
 }
 
 .details-value {
-  font-weight: 500;
+  font-weight: 550;
   font-size: var(--body-text-size);
   letter-spacing: -0.01em;
   text-transform: uppercase;
@@ -223,7 +223,7 @@ body {
   margin-inline: auto;
   font-family: 'Pantograph Pro', sans-serif;
   font-size: var(--body-text-size);
-  font-weight: 500;
+  font-weight: 550;
   line-height: 1.22;
   letter-spacing: -0.01em;
   text-transform: none;
@@ -265,7 +265,7 @@ body {
 .rsvp-intro {
   text-align: center;
   font-size: var(--body-text-size);
-  font-weight: 500;
+  font-weight: 550;
   letter-spacing: -0.01em;
   text-transform: uppercase;
   margin-bottom: 2rem;
@@ -298,7 +298,7 @@ body {
 }
 
 .field-optional {
-  font-weight: 600;
+  font-weight: 550;
   letter-spacing: 0;
   text-transform: none;
   opacity: 0.6;
@@ -307,7 +307,7 @@ body {
 .field-input {
   font-family: 'Pantograph Pro', sans-serif;
   font-size: var(--body-text-size);
-  font-weight: 600;
+  font-weight: 550;
   color: #000;
   background: #fff;
   border: 2.5px solid #000;
@@ -378,7 +378,7 @@ body {
 .radio-text {
   font-family: 'Pantograph Pro', sans-serif;
   font-size: var(--body-text-size);
-  font-weight: 500;
+  font-weight: 550;
   text-transform: uppercase;
   letter-spacing: -0.01em;
 }
@@ -411,7 +411,7 @@ body {
   text-align: center;
   font-family: 'Pantograph Pro', sans-serif;
   font-size: var(--body-text-size);
-  font-weight: 600;
+  font-weight: 550;
   line-height: 1.4;
   padding: 1.5rem 0 0;
 }
