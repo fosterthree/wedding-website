@@ -307,7 +307,7 @@ body {
 
 .field-optional {
   font-weight: var(--theme-body-weight);
-  letter-spacing: 0;
+  letter-spacing: var(--theme-body-letter-spacing);
   text-transform: none;
   opacity: 0.6;
 }
