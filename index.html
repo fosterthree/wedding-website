@@ -92,7 +92,7 @@
         <form class="rsvp-form" action="https://formspree.io/f/mbdqndeo" method="POST" novalidate>
           <div class="field">
             <label class="field-label" for="name">Full Name</label>
-            <input class="field-input" type="text" id="name" name="name" required placeholder="Grace Yuhas" />
+            <input class="field-input" type="text" id="name" name="name" required placeholder="Full Name" />
           </div>
 
           <div class="field">
@@ -122,20 +122,7 @@
             </select>
           </div>
 
-          <div class="field" id="guest2-field" hidden>
-            <label class="field-label" for="guest2">Guest Name</label>
-            <input class="field-input" type="text" id="guest2" name="guest2" placeholder="Full name" />
-          </div>
-
-          <div class="field">
-            <label class="field-label" for="dietary">Dietary Restrictions or Allergies <span class="field-optional">(optional)</span></label>
-            <input class="field-input" type="text" id="dietary" name="dietary" placeholder="None" />
-          </div>
-
-          <div class="field">
-            <label class="field-label" for="song">Song Request <span class="field-optional">(optional)</span></label>
-            <input class="field-input" type="text" id="song" name="song" placeholder="What gets you on the dance floor?" />
-          </div>
+          <div id="guest-fields"></div>
 
           <div class="field">
             <label class="field-label" for="message">A Note for the Couple <span class="field-optional">(optional)</span></label>
