@@ -319,7 +319,7 @@ body {
   color: #000;
   background: #fff;
   border: 2.5px solid #000;
-  border-radius: 0.45rem;
+  border-radius: 2.5px;
   padding: 0.8rem 1rem;
   width: 100%;
   appearance: none;
@@ -405,7 +405,7 @@ body {
   letter-spacing: 0.18em;
   font-weight: var(--theme-bold-body-weight);
   border: 2.5px solid #000;
-  border-radius: 0.45rem;
+  border-radius: 2.5px;
   text-transform: uppercase;
   transition: background 0.2s ease, color 0.2s ease;
 }
