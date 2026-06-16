@@ -68,7 +68,7 @@ body {
 
 .page-title {
   display: block;
-  width: min(100%, 310px);
+  width: min(100%, 248px);
   height: auto;
   margin: 0 auto 1.35rem;
 }
