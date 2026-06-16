@@ -33,6 +33,7 @@ function renderGuestFields() {
   const guestCount = Number.parseInt(guestsSelect.value, 10);
 
   guestFieldsContainer.innerHTML = '';
+  guestFieldsContainer.hidden = guestCount < 2;
 
   for (let guestNumber = 2; guestNumber <= guestCount; guestNumber += 1) {
     const field = document.createElement('div');
