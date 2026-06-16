@@ -204,12 +204,12 @@ body {
 .venue-title {
   font-family: 'Pantograph Pro', sans-serif;
   font-weight: 700;
-  font-size: clamp(1.9rem, 2.3vw + 0.8rem, 3rem);
+  font-size: clamp(1.55rem, 1.6vw + 0.7rem, 2.25rem);
   line-height: 0.95;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 auto 2.75rem;
+  margin: 0 auto 2.15rem;
 }
 
 .venue-intro,
@@ -225,12 +225,12 @@ body {
 }
 
 .venue-intro {
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.55rem;
 }
 
 .venue-list {
   padding-left: 1.9rem;
-  margin-top: 1.2rem;
+  margin-top: 1rem;
 }
 
 .venue-list li {
