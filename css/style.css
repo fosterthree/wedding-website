@@ -73,7 +73,9 @@ body {
   margin: 0 auto 1.35rem;
 }
 
+.page-section--venue .page-title,
 .rsvp-container .page-title {
+  margin-top: -0.15rem;
   margin-bottom: 0.95rem;
 }
 
