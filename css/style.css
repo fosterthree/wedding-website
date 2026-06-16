@@ -188,7 +188,7 @@ body {
 }
 
 .details-value {
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(1rem, 0.95vw + 0.5rem, 1.15rem);
   letter-spacing: -0.01em;
   text-transform: uppercase;
@@ -222,7 +222,7 @@ body {
   margin-inline: auto;
   font-family: 'Pantograph Pro', sans-serif;
   font-size: clamp(1rem, 0.95vw + 0.5rem, 1.15rem);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.22;
   letter-spacing: -0.01em;
   text-transform: none;
@@ -264,7 +264,7 @@ body {
 .rsvp-intro {
   text-align: center;
   font-size: clamp(1rem, 0.95vw + 0.5rem, 1.15rem);
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.01em;
   text-transform: uppercase;
   margin-bottom: 2rem;
@@ -345,7 +345,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
-  margin-top: 0.15rem;
+  margin-top: 0.35rem;
 }
 
 .radio-label {
@@ -360,7 +360,7 @@ body {
   -webkit-appearance: none;
   width: 18px;
   height: 18px;
-  border: 1.5px solid #000;
+  border: 2.5px solid #000;
   border-radius: 50%;
   flex-shrink: 0;
   position: relative;
@@ -377,7 +377,9 @@ body {
 .radio-text {
   font-family: 'Pantograph Pro', sans-serif;
   font-size: clamp(1rem, 0.95vw + 0.45rem, 1.1rem);
-  font-weight: 600;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
 }
 
 .field--submit {
