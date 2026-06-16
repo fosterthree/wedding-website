@@ -259,9 +259,9 @@ body {
 
 .rsvp-title {
   font-family: 'Pantograph Pro', sans-serif;
-  font-weight: 700;
-  font-size: clamp(1.55rem, 1.6vw + 0.7rem, 2.1rem);
-  line-height: 0.95;
+  font-weight: var(--theme-title-weight);
+  font-size: var(--theme-title-size);
+  line-height: var(--theme-title-line-height);
   letter-spacing: -0.02em;
   text-transform: uppercase;
   text-align: center;
@@ -270,8 +270,8 @@ body {
 
 .rsvp-intro {
   text-align: center;
-  font-size: var(--body-text-size);
-  font-weight: 550;
+  font-size: var(--theme-body-size);
+  font-weight: var(--theme-body-weight);
   letter-spacing: -0.01em;
   text-transform: uppercase;
   margin-bottom: 2rem;
@@ -297,14 +297,14 @@ body {
 .field-label,
 .field--fieldset legend {
   font-family: 'Pantograph Pro', sans-serif;
-  font-size: var(--body-text-size);
-  font-weight: 700;
+  font-size: var(--theme-body-size);
+  font-weight: var(--theme-bold-body-weight);
   letter-spacing: -0.01em;
   text-transform: uppercase;
 }
 
 .field-optional {
-  font-weight: 550;
+  font-weight: var(--theme-body-weight);
   letter-spacing: 0;
   text-transform: none;
   opacity: 0.6;
@@ -312,8 +312,8 @@ body {
 
 .field-input {
   font-family: 'Pantograph Pro', sans-serif;
-  font-size: var(--body-text-size);
-  font-weight: 550;
+  font-size: var(--theme-body-size);
+  font-weight: var(--theme-body-weight);
   color: #000;
   background: #fff;
   border: 2.5px solid #000;
@@ -383,8 +383,8 @@ body {
 
 .radio-text {
   font-family: 'Pantograph Pro', sans-serif;
-  font-size: var(--body-text-size);
-  font-weight: 550;
+  font-size: var(--theme-body-size);
+  font-weight: var(--theme-body-weight);
   text-transform: uppercase;
   letter-spacing: -0.01em;
 }
@@ -395,13 +395,13 @@ body {
 }
 
 .btn--submit {
-  font-size: 0.85rem;
+  font-size: var(--theme-body-size);
   padding: 0.75rem 3rem;
   cursor: pointer;
   background: #fff;
   font-family: 'Pantograph Pro', sans-serif;
   letter-spacing: 0.18em;
-  font-weight: 700;
+  font-weight: var(--theme-bold-body-weight);
   border: 2.5px solid #000;
   border-radius: 0.45rem;
   text-transform: uppercase;
@@ -416,8 +416,8 @@ body {
 .rsvp-success {
   text-align: center;
   font-family: 'Pantograph Pro', sans-serif;
-  font-size: var(--body-text-size);
-  font-weight: 550;
+  font-size: var(--theme-body-size);
+  font-weight: var(--theme-body-weight);
   line-height: 1.4;
   padding: 1.5rem 0 0;
 }
