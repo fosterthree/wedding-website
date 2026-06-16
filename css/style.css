@@ -77,7 +77,13 @@ body {
 .rsvp-container .page-title {
   margin-top: 0;
   margin-bottom: 0.95rem;
-  transform: translateY(-0.75rem);
+  transform: translateY(-1.1rem);
+}
+
+#guest-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 /* ─── HEADER ─── */
