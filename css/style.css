@@ -68,13 +68,12 @@ body {
 
 .page-title {
   display: block;
-  width: min(100%, 760px);
+  width: min(100%, 620px);
   height: auto;
-  margin: 0 auto 1.6rem;
+  margin: 0 auto 1.35rem;
 }
 
 .rsvp-container .page-title {
-  width: min(100%, 620px);
   margin-bottom: 0.95rem;
 }
 
