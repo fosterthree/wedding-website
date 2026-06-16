@@ -423,3 +423,9 @@ body {
   line-height: var(--theme-body-line-height);
   padding: 1.5rem 0 0;
 }
+
+.text-small-caps {
+  font-size: 0.84em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
