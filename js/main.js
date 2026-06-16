@@ -1,4 +1,4 @@
-const navButtons = Array.from(document.querySelectorAll('[data-section]'));
+const navButtons = Array.from(document.querySelectorAll('.nav-link[data-section]'));
 const sections = Array.from(document.querySelectorAll('.page-section'));
 
 function setActiveSection(sectionName) {
