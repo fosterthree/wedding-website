@@ -75,8 +75,9 @@ body {
 
 .page-section--venue .page-title,
 .rsvp-container .page-title {
-  margin-top: -0.75rem;
+  margin-top: 0;
   margin-bottom: 0.95rem;
+  transform: translateY(-0.75rem);
 }
 
 /* ─── HEADER ─── */
