@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"/Users/asa/Library/Mobile Documents/com~apple~CloudDocs/Documents/Wedding/Wedding Website\" && git add -A && git diff --cached --quiet || git commit -m \"Auto-commit edits\" 2>/dev/null || true",
+            "statusMessage": "Saving edits..."
+          }
+        ]
+      }
+    ]
+  }
+}
