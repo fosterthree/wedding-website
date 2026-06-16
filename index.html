@@ -83,7 +83,75 @@
     </section>
 
     <section class="page-section" data-section="travel" hidden></section>
-    <section class="page-section" data-section="rsvp" hidden></section>
+
+    <section class="page-section page-section--rsvp" data-section="rsvp" hidden>
+      <div class="container rsvp-container">
+        <h1 class="rsvp-title">RSVP</h1>
+        <p class="rsvp-intro">Kindly reply by September 24th, 2026.</p>
+
+        <form class="rsvp-form" action="https://formspree.io/f/mbdqndeo" method="POST" novalidate>
+          <div class="field">
+            <label class="field-label" for="name">Full Name</label>
+            <input class="field-input" type="text" id="name" name="name" required placeholder="Grace Yuhas" />
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="email">Email Address</label>
+            <input class="field-input" type="email" id="email" name="email" required placeholder="you@example.com" />
+          </div>
+
+          <fieldset class="field field--fieldset">
+            <legend class="field-label">Will you be attending?</legend>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input class="radio-input" type="radio" name="attending" value="Joyfully accepts" required />
+                <span class="radio-text">Joyfully accepts</span>
+              </label>
+              <label class="radio-label">
+                <input class="radio-input" type="radio" name="attending" value="Regretfully declines" />
+                <span class="radio-text">Regretfully declines</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label class="field-label" for="guests">Number of Guests (including yourself)</label>
+            <select class="field-input field-select" id="guests" name="guests">
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </div>
+
+          <div class="field" id="guest2-field" hidden>
+            <label class="field-label" for="guest2">Guest Name</label>
+            <input class="field-input" type="text" id="guest2" name="guest2" placeholder="Full name" />
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="dietary">Dietary Restrictions or Allergies <span class="field-optional">(optional)</span></label>
+            <input class="field-input" type="text" id="dietary" name="dietary" placeholder="None" />
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="song">Song Request <span class="field-optional">(optional)</span></label>
+            <input class="field-input" type="text" id="song" name="song" placeholder="What gets you on the dance floor?" />
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="message">A Note for the Couple <span class="field-optional">(optional)</span></label>
+            <textarea class="field-input field-textarea" id="message" name="message" rows="4" placeholder="We can't wait to celebrate with you!"></textarea>
+          </div>
+
+          <div class="field field--submit">
+            <button class="btn btn--submit" type="submit">Send RSVP</button>
+          </div>
+        </form>
+
+        <p class="rsvp-success" id="rsvp-success" hidden>
+          Thank you! We've received your RSVP and can't wait to celebrate with you.
+        </p>
+      </div>
+    </section>
   </main>
 
   <script src="js/main.js"></script>
