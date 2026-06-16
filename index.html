@@ -19,129 +19,55 @@
   <!-- NAV -->
   <nav class="site-nav" aria-label="Main navigation">
     <ul class="nav-list">
-      <li><a href="index.html" class="nav-link nav-link--active">Details</a></li>
-      <li><a href="venue.html"  class="nav-link">Venue</a></li>
-      <li><a href="travel.html" class="nav-link">Travel</a></li>
-      <li><a href="rsvp.html"   class="nav-link">RSVP</a></li>
+      <li><button type="button" class="nav-link nav-link--active" data-section="details" aria-pressed="true">Details</button></li>
+      <li><button type="button" class="nav-link" data-section="venue" aria-pressed="false">Venue</button></li>
+      <li><button type="button" class="nav-link" data-section="travel" aria-pressed="false">Travel</button></li>
+      <li><button type="button" class="nav-link" data-section="rsvp" aria-pressed="false">RSVP</button></li>
     </ul>
   </nav>
 
   <!-- DETAILS -->
   <main class="site-main">
-    <div class="container">
-      <dl class="details-list">
+    <section class="page-section" data-section="details">
+      <div class="container">
+        <dl class="details-list">
 
-        <div class="details-row">
-          <dt class="details-label">When:</dt>
-          <dd class="details-value">
-            Saturday, October 24th, 2026<br>
-            6pm – 10pm
-          </dd>
-        </div>
+          <div class="details-row">
+            <dt class="details-label">When:</dt>
+            <dd class="details-value">
+              Saturday, October 24th, 2026<br>
+              6pm – 10pm
+            </dd>
+          </div>
 
-        <div class="details-row">
-          <dt class="details-label">Where:</dt>
-          <dd class="details-value">
-            Allegheny Rivertrail Park<br>
-            285 River Ave, Pittsburgh, PA 15215
-          </dd>
-        </div>
+          <div class="details-row">
+            <dt class="details-label">Where:</dt>
+            <dd class="details-value">
+              Allegheny Rivertrail Park<br>
+              285 River Ave, Pittsburgh, PA 15215
+            </dd>
+          </div>
 
-        <div class="details-row">
-          <dt class="details-label">Food &amp;<br>Drink:</dt>
-          <dd class="details-value">Classic Pittsburgh fare with a<br>New England twist</dd>
-        </div>
+          <div class="details-row">
+            <dt class="details-label">Food &amp;<br>Drink:</dt>
+            <dd class="details-value">Classic Pittsburgh fare with a<br>New England twist</dd>
+          </div>
 
-        <div class="details-row">
-          <dt class="details-label">Attire:</dt>
-          <dd class="details-value">Fall Cocktail (Open-air venue, layers recommended)</dd>
-        </div>
+          <div class="details-row">
+            <dt class="details-label">Attire:</dt>
+            <dd class="details-value">Fall Cocktail (Open-air venue, layers recommended)</dd>
+          </div>
 
-      </dl>
-    </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="page-section" data-section="venue" hidden></section>
+    <section class="page-section" data-section="travel" hidden></section>
+    <section class="page-section" data-section="rsvp" hidden></section>
   </main>
 
-  <!-- RSVP FORM — saved for rsvp.html -->
-  <!--
-  <section id="rsvp">
-    <form class="rsvp-form" action="https://formspree.io/f/mbdqndeo" method="POST" novalidate>
-
-      <div class="field">
-        <label class="field-label" for="name">Full Name</label>
-        <input class="field-input" type="text" id="name" name="name" required placeholder="Grace Yuhas" />
-      </div>
-
-      <div class="field">
-        <label class="field-label" for="email">Email Address</label>
-        <input class="field-input" type="email" id="email" name="email" required placeholder="you@example.com" />
-      </div>
-
-      <fieldset class="field field--fieldset">
-        <legend class="field-label">Will you be attending?</legend>
-        <div class="radio-group">
-          <label class="radio-label">
-            <input class="radio-input" type="radio" name="attending" value="Joyfully accepts" required />
-            <span class="radio-text">Joyfully accepts</span>
-          </label>
-          <label class="radio-label">
-            <input class="radio-input" type="radio" name="attending" value="Regretfully declines" />
-            <span class="radio-text">Regretfully declines</span>
-          </label>
-        </div>
-      </fieldset>
-
-      <div class="field">
-        <label class="field-label" for="guests">Number of Guests (including yourself)</label>
-        <select class="field-input field-select" id="guests" name="guests">
-          <option value="1">1</option>
-          <option value="2">2</option>
-        </select>
-      </div>
-
-      <div class="field" id="guest2-field" hidden>
-        <label class="field-label" for="guest2">Guest Name</label>
-        <input class="field-input" type="text" id="guest2" name="guest2" placeholder="Full name" />
-      </div>
-
-      <div class="field field--submit">
-        <button class="btn btn--submit" type="submit">Send RSVP</button>
-      </div>
-
-    </form>
-
-    <p class="rsvp-success" id="rsvp-success" hidden>
-      Thank you! We've received your RSVP and can't wait to celebrate with you.
-    </p>
-
-    <script>
-      const guestsSelect = document.getElementById('guests');
-      const guest2Field  = document.getElementById('guest2-field');
-      const guest2Input  = document.getElementById('guest2');
-      guestsSelect.addEventListener('change', () => {
-        const isTwo = guestsSelect.value === '2';
-        guest2Field.hidden = !isTwo;
-        guest2Input.required = isTwo;
-      });
-
-      const form = document.querySelector('.rsvp-form');
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const data = new FormData(form);
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        });
-        if (res.ok) {
-          form.hidden = true;
-          document.getElementById('rsvp-success').hidden = false;
-        } else {
-          alert('Something went wrong — please try again or email us directly.');
-        }
-      });
-    </script>
-  </section>
-  -->
+  <script src="js/main.js"></script>
 
 </body>
 </html>
