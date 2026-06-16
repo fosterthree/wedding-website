@@ -282,7 +282,7 @@ body {
 .rsvp-form {
   display: flex;
   flex-direction: column;
-  gap: 1.35rem;
+  gap: 1.5rem;
 }
 
 .field {
@@ -309,7 +309,13 @@ body {
   font-weight: var(--theme-body-weight);
   letter-spacing: var(--theme-body-letter-spacing);
   text-transform: none;
+  font-style: italic;
   opacity: 0.6;
+}
+
+.field-input::placeholder,
+.radio-text {
+  font-style: italic;
 }
 
 .field-input {
