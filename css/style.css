@@ -66,6 +66,18 @@ body {
   padding-inline: 1.5rem;
 }
 
+.page-title {
+  display: block;
+  width: min(100%, 760px);
+  height: auto;
+  margin: 0 auto 1.6rem;
+}
+
+.rsvp-container .page-title {
+  width: min(100%, 620px);
+  margin-bottom: 0.95rem;
+}
+
 /* ─── HEADER ─── */
 .site-header {
   width: 100%;
@@ -214,17 +226,6 @@ body {
   max-width: 760px;
 }
 
-.venue-title {
-  font-family: 'Pantograph Pro', sans-serif;
-  font-weight: var(--theme-title-weight);
-  font-size: var(--theme-title-size);
-  line-height: var(--theme-title-line-height);
-  letter-spacing: var(--theme-title-letter-spacing);
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0 auto 1.45rem;
-}
-
 .venue-intro,
 .venue-list {
   width: min(100%, 760px);
@@ -257,17 +258,6 @@ body {
 
 .rsvp-container {
   max-width: 620px;
-}
-
-.rsvp-title {
-  font-family: 'Pantograph Pro', sans-serif;
-  font-weight: var(--theme-title-weight);
-  font-size: var(--theme-title-size);
-  line-height: var(--theme-title-line-height);
-  letter-spacing: var(--theme-title-letter-spacing);
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0 auto 0.9rem;
 }
 
 .rsvp-intro {
