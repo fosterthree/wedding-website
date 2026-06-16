@@ -318,8 +318,8 @@ body {
   font-weight: var(--theme-body-weight);
   color: #000;
   background: #fff;
-  border: 4.5px solid #000;
-  border-radius: 4.5px;
+  border: 3.5px solid #000;
+  border-radius: 3.5px;
   padding: 0.8rem 1rem;
   width: 100%;
   appearance: none;
@@ -369,7 +369,7 @@ body {
   -webkit-appearance: none;
   width: 18px;
   height: 18px;
-  border: 4.5px solid #000;
+  border: 3.5px solid #000;
   border-radius: 50%;
   flex-shrink: 0;
   position: relative;
@@ -404,8 +404,8 @@ body {
   font-family: 'Pantograph Pro', sans-serif;
   letter-spacing: 0.18em;
   font-weight: var(--theme-bold-body-weight);
-  border: 4.5px solid #000;
-  border-radius: 4.5px;
+  border: 3.5px solid #000;
+  border-radius: 3.5px;
   text-transform: uppercase;
   transition: background 0.2s ease, color 0.2s ease;
 }
