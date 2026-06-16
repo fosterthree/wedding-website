@@ -2,8 +2,7 @@ const navButtons = Array.from(document.querySelectorAll('.nav-link[data-section]
 const sections = Array.from(document.querySelectorAll('.page-section'));
 const rsvpForm = document.querySelector('.rsvp-form');
 const guestsSelect = document.getElementById('guests');
-const guest2Field = document.getElementById('guest2-field');
-const guest2Input = document.getElementById('guest2');
+const guestFieldsContainer = document.getElementById('guest-fields');
 const rsvpSuccess = document.getElementById('rsvp-success');
 
 function setActiveSection(sectionName) {
@@ -26,12 +25,39 @@ navButtons.forEach((button) => {
 
 setActiveSection('details');
 
-if (guestsSelect && guest2Field && guest2Input) {
-  guestsSelect.addEventListener('change', () => {
-    const isTwoGuests = guestsSelect.value === '2';
-    guest2Field.hidden = !isTwoGuests;
-    guest2Input.required = isTwoGuests;
-  });
+function renderGuestFields() {
+  if (!guestsSelect || !guestFieldsContainer) {
+    return;
+  }
+
+  const guestCount = Number.parseInt(guestsSelect.value, 10);
+
+  guestFieldsContainer.innerHTML = '';
+
+  for (let guestNumber = 2; guestNumber <= guestCount; guestNumber += 1) {
+    const field = document.createElement('div');
+    field.className = 'field';
+
+    const label = document.createElement('label');
+    label.className = 'field-label';
+    label.htmlFor = `guest-${guestNumber}`;
+    label.textContent = `Guest #${guestNumber}`;
+
+    const input = document.createElement('input');
+    input.className = 'field-input';
+    input.type = 'text';
+    input.id = `guest-${guestNumber}`;
+    input.name = `guest${guestNumber}`;
+    input.placeholder = 'Full Name';
+
+    field.append(label, input);
+    guestFieldsContainer.append(field);
+  }
+}
+
+if (guestsSelect && guestFieldsContainer) {
+  guestsSelect.addEventListener('change', renderGuestFields);
+  renderGuestFields();
 }
 
 if (rsvpForm && rsvpSuccess) {
