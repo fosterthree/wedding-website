@@ -49,11 +49,13 @@ body {
 :root {
   --theme-title-size: clamp(2rem, 1.2vw + 1.6rem, 2.15rem);
   --theme-title-weight: 700;
+  --theme-title-letter-spacing: -0.02em;
   --theme-body-size: 1.25rem;
   --theme-body-weight: 550;
   --theme-bold-body-weight: 700;
+  --theme-body-letter-spacing: 0.005em;
   --theme-title-line-height: 0.95;
-  --theme-body-line-height: 1.22;
+  --theme-body-line-height: 1.28;
   --content-rule-width: min(800px, calc(100vw - 2rem));
 }
 
@@ -132,7 +134,7 @@ body {
   font-family: 'Pantograph Pro', sans-serif;
   font-weight: var(--theme-bold-body-weight);
   font-size: var(--theme-body-size);
-  letter-spacing: -0.01em;
+  letter-spacing: var(--theme-body-letter-spacing);
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
@@ -188,7 +190,7 @@ body {
 .details-label {
   font-weight: var(--theme-bold-body-weight);
   font-size: var(--theme-body-size);
-  letter-spacing: -0.01em;
+  letter-spacing: var(--theme-body-letter-spacing);
   text-transform: uppercase;
   line-height: var(--theme-body-line-height);
   text-align: right;
@@ -197,7 +199,7 @@ body {
 .details-value {
   font-weight: var(--theme-body-weight);
   font-size: var(--theme-body-size);
-  letter-spacing: -0.01em;
+  letter-spacing: var(--theme-body-letter-spacing);
   text-transform: uppercase;
   line-height: var(--theme-body-line-height);
   max-width: 32rem;
@@ -217,7 +219,7 @@ body {
   font-weight: var(--theme-title-weight);
   font-size: var(--theme-title-size);
   line-height: var(--theme-title-line-height);
-  letter-spacing: -0.02em;
+  letter-spacing: var(--theme-title-letter-spacing);
   text-transform: uppercase;
   text-align: center;
   margin: 0 auto 1.45rem;
@@ -231,7 +233,7 @@ body {
   font-size: var(--theme-body-size);
   font-weight: var(--theme-body-weight);
   line-height: var(--theme-body-line-height);
-  letter-spacing: -0.01em;
+  letter-spacing: var(--theme-body-letter-spacing);
   text-transform: none;
 }
 
@@ -262,7 +264,7 @@ body {
   font-weight: var(--theme-title-weight);
   font-size: var(--theme-title-size);
   line-height: var(--theme-title-line-height);
-  letter-spacing: -0.02em;
+  letter-spacing: var(--theme-title-letter-spacing);
   text-transform: uppercase;
   text-align: center;
   margin: 0 auto 0.9rem;
@@ -272,7 +274,7 @@ body {
   text-align: center;
   font-size: var(--theme-body-size);
   font-weight: var(--theme-body-weight);
-  letter-spacing: -0.01em;
+  letter-spacing: var(--theme-body-letter-spacing);
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
@@ -299,7 +301,7 @@ body {
   font-family: 'Pantograph Pro', sans-serif;
   font-size: var(--theme-body-size);
   font-weight: var(--theme-bold-body-weight);
-  letter-spacing: -0.01em;
+  letter-spacing: var(--theme-body-letter-spacing);
   text-transform: uppercase;
 }
 
@@ -386,7 +388,7 @@ body {
   font-size: var(--theme-body-size);
   font-weight: var(--theme-body-weight);
   text-transform: uppercase;
-  letter-spacing: -0.01em;
+  letter-spacing: var(--theme-body-letter-spacing);
 }
 
 .field--submit {
