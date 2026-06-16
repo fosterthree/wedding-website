@@ -47,8 +47,14 @@ body {
 }
 
 :root {
+  --theme-title-size: clamp(2rem, 1.2vw + 1.6rem, 2.15rem);
+  --theme-title-weight: 700;
+  --theme-body-size: 1.25rem;
+  --theme-body-weight: 550;
+  --theme-bold-body-weight: 700;
+  --theme-title-line-height: 0.95;
+  --theme-body-line-height: 1.22;
   --content-rule-width: min(800px, calc(100vw - 2rem));
-  --body-text-size: 1.25rem;
 }
 
 /* ─── CONTAINER ─── */
