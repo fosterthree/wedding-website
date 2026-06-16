@@ -214,9 +214,9 @@ body {
 
 .venue-title {
   font-family: 'Pantograph Pro', sans-serif;
-  font-weight: 700;
-  font-size: clamp(1.55rem, 1.6vw + 0.7rem, 2.25rem);
-  line-height: 0.95;
+  font-weight: var(--theme-title-weight);
+  font-size: var(--theme-title-size);
+  line-height: var(--theme-title-line-height);
   letter-spacing: -0.02em;
   text-transform: uppercase;
   text-align: center;
@@ -228,9 +228,9 @@ body {
   width: min(100%, 760px);
   margin-inline: auto;
   font-family: 'Pantograph Pro', sans-serif;
-  font-size: var(--body-text-size);
-  font-weight: 550;
-  line-height: 1.22;
+  font-size: var(--theme-body-size);
+  font-weight: var(--theme-body-weight);
+  line-height: var(--theme-body-line-height);
   letter-spacing: -0.01em;
   text-transform: none;
 }
