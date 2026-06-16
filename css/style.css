@@ -186,8 +186,8 @@ body {
 }
 
 .details-label {
-  font-weight: 700;
-  font-size: clamp(1rem, 0.95vw + 0.5rem, 1.15rem);
+  font-weight: var(--theme-bold-body-weight);
+  font-size: var(--theme-body-size);
   letter-spacing: -0.01em;
   text-transform: uppercase;
   line-height: 1.02;
@@ -195,11 +195,11 @@ body {
 }
 
 .details-value {
-  font-weight: 550;
-  font-size: var(--body-text-size);
+  font-weight: var(--theme-body-weight);
+  font-size: var(--theme-body-size);
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  line-height: 1.08;
+  line-height: var(--theme-body-line-height);
   max-width: 32rem;
 }
 
