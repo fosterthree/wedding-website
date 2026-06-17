@@ -435,6 +435,10 @@ body {
   letter-spacing: 0.01em;
 }
 
+.mobile-test-marker {
+  display: none;
+}
+
 @media (max-width: 720px) {
   :root {
     --theme-body-size: 1.1rem;
@@ -529,5 +533,15 @@ body {
 
   .radio-group {
     gap: 0.55rem;
+  }
+
+  .mobile-test-marker {
+    display: block;
+    text-align: center;
+    margin: 2.5rem 0 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
   }
 }
