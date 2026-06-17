@@ -472,26 +472,28 @@ body {
 
   .details-list {
     width: 100%;
+    align-items: stretch;
     gap: 0.85rem;
   }
 
   .details-row {
-    grid-template-columns: 1fr;
-    row-gap: 0.35rem;
+    grid-template-columns: 5.5rem minmax(0, 1fr);
+    column-gap: 0.75rem;
+    row-gap: 0;
     max-width: none;
     width: 100%;
     margin: 0;
-    text-align: center;
-    justify-items: center;
+    text-align: left;
+    justify-items: stretch;
   }
 
   .details-label {
-    text-align: center;
+    text-align: right;
   }
 
   .details-value {
     max-width: 100%;
-    text-align: center;
+    text-align: left;
   }
 
   .venue-intro,
