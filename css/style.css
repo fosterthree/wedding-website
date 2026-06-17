@@ -477,14 +477,13 @@ body {
   }
 
   .details-row {
-    grid-template-columns: max-content minmax(0, max-content);
+    grid-template-columns: max-content minmax(0, 14rem);
     column-gap: 0.75rem;
     row-gap: 0;
-    max-width: none;
-    width: 100%;
+    width: fit-content;
+    max-width: 100%;
     margin: 0 auto;
     text-align: left;
-    justify-content: center;
     justify-items: stretch;
   }
 
