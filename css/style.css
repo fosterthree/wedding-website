@@ -477,13 +477,14 @@ body {
   }
 
   .details-row {
-    grid-template-columns: 5.5rem minmax(0, 1fr);
+    grid-template-columns: max-content minmax(0, max-content);
     column-gap: 0.75rem;
     row-gap: 0;
     max-width: none;
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     text-align: left;
+    justify-content: center;
     justify-items: stretch;
   }
 
@@ -492,7 +493,7 @@ body {
   }
 
   .details-value {
-    max-width: 100%;
+    max-width: 17rem;
     text-align: left;
   }
 
