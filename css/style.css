@@ -70,13 +70,13 @@ body {
   display: block;
   width: min(100%, 248px);
   height: auto;
-  margin: 0 auto 1.35rem;
+  margin: 0 auto 2.025rem;
 }
 
 .page-section--venue .page-title,
 .rsvp-container .page-title {
   margin-top: 0;
-  margin-bottom: 0.95rem;
+  margin-bottom: 1.425rem;
   transform: translateY(-1.35rem);
 }
 
@@ -452,13 +452,13 @@ body {
 
   .page-title {
     width: min(100%, 210px);
-    margin-bottom: 1.1rem;
+    margin-bottom: 1.65rem;
   }
 
   .page-section--venue .page-title,
   .rsvp-container .page-title {
     transform: translateY(-1rem);
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.2rem;
   }
 
   .site-main {
