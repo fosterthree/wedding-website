@@ -70,13 +70,13 @@ body {
   display: block;
   width: min(100%, 248px);
   height: auto;
-  margin: 0 auto 2.025rem;
+  margin: 0 auto 1.35rem;
 }
 
 .page-section--venue .page-title,
 .rsvp-container .page-title {
   margin-top: 0;
-  margin-bottom: 1.425rem;
+  margin-bottom: 0.95rem;
   transform: translateY(-1.35rem);
 }
 
