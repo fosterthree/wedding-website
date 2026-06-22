@@ -455,6 +455,11 @@ body {
     margin-bottom: 1.65rem;
   }
 
+  .page-section[data-section='details'] .page-title {
+    width: min(100%, 231px);
+    margin-bottom: 1.98rem;
+  }
+
   .page-section--venue .page-title,
   .rsvp-container .page-title {
     transform: translateY(-1rem);
