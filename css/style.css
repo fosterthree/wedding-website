@@ -441,7 +441,7 @@ body {
 
 @media (max-width: 720px) {
   :root {
-    --theme-body-size: 2rem;
+    --theme-body-size: 4rem;
     --theme-body-line-height: 1.22;
     --theme-body-letter-spacing: 0.01em;
   }
