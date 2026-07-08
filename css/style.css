@@ -234,6 +234,7 @@ body {
   letter-spacing: var(--theme-body-letter-spacing);
   text-transform: uppercase;
   line-height: var(--theme-body-line-height);
+  font-style: italic;
 }
 
 .details-note a {
@@ -521,6 +522,7 @@ body {
 
   .details-note {
     max-width: 100%;
+    padding-inline: 0.8rem;
   }
 
   .venue-intro,
