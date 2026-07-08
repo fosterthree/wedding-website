@@ -225,6 +225,23 @@ body {
   max-width: 32rem;
 }
 
+.details-note {
+  width: 100%;
+  max-width: 520px;
+  margin: 1.1rem auto 0;
+  font-weight: var(--theme-body-weight);
+  font-size: var(--theme-body-size);
+  letter-spacing: var(--theme-body-letter-spacing);
+  text-transform: uppercase;
+  line-height: var(--theme-body-line-height);
+}
+
+.details-note a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.08em;
+}
+
 /* ─── VENUE ─── */
 .page-section--venue {
   padding-top: 1.3rem;
@@ -500,6 +517,10 @@ body {
   .details-value {
     max-width: none;
     text-align: left;
+  }
+
+  .details-note {
+    max-width: 100%;
   }
 
   .venue-intro,
